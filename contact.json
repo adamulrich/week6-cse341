@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "63c04653182913362ec8f11a"
+  },
+  "firstName": "Teralyn",
+  "lastName": "Thompson",
+  "email": "tt@gmail.com",
+  "favoritecolor": "orange",
+  "birthday": "1/1/1980"
+},{
+  "_id": {
+    "$oid": "63c08e1877375e1eefcb61e5"
+  },
+  "firstName": "Sherie",
+  "lastName": "Schmitt",
+  "email": "ss@gmail.com",
+  "favoriteColor": "purple",
+  "birthday": "2/2/1980"
+},{
+  "_id": {
+    "$oid": "63c08e8877375e1eefcb61e7"
+  },
+  "firstName": "Tandee",
+  "lastName": "Jones",
+  "email": "ts@gmail.com",
+  "favoriteColor": "hot pink",
+  "birthday": "05/05/1980"
+},{
+  "_id": {
+    "$oid": "63ccc60306ef90bf066e4962"
+  },
+  "firstName": "Sarah",
+  "lastName": "Jane",
+  "email": "sr@gmail.com",
+  "favoriteColor": "green",
+  "birthday": "06/05/1980"
+},{
+  "_id": {
+    "$oid": "63d2bb621d48d390f5339a94"
+  }
+},{
+  "_id": {
+    "$oid": "63da034ccf491c3828e79775"
+  }
+},{
+  "_id": {
+    "$oid": "63da035bcf491c3828e79776"
+  }
+},{
+  "_id": {
+    "$oid": "63da035dcf491c3828e79777"
+  }
+},{
+  "_id": {
+    "$oid": "63da0364cf491c3828e79778"
+  }
+},{
+  "_id": {
+    "$oid": "63da0368cf491c3828e79779"
+  }
+}]
