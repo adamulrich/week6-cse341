@@ -5,8 +5,8 @@ const doc = {
     title: 'My API',
     description: 'Temple API'
   },
-  host: 'cse341-instructor.herokuapp.com',
-  schemes: ['https']
+  host: '',
+  schemes: []
 };
 
 const outputFile = './swagger.json';

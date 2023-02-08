@@ -5,11 +5,9 @@
     "description": "Temple API",
     "version": "1.0.0"
   },
-  "host": "cse341-instructor.herokuapp.com",
+  "host": "",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": [],
   "paths": {
     "/api-docs": {
       "get": {
