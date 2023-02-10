@@ -29,7 +29,7 @@ const getSingle = async (req, res) => {
 
 const createContact = async (req, res) => {
   const contact = req.body;
-  const validation = new Validator(contact, contactRules)
+  let validation = new Validator(contact, contactRules)
   if (validation.passes()) {
     const response = await mongodb.getDb().db().collection('contact').insertOne(contact);
     if (response.acknowledged) {
@@ -38,7 +38,7 @@ const createContact = async (req, res) => {
       res.status(500).json(response.error || 'Some error occurred while creating the contact.');
     }
   } else {
-    res.status(500).json(response.error || 'Some error occurred while creating the contact.');
+    res.status(500).json('Some error occurred while creating the contact.');
   }
 };
 
