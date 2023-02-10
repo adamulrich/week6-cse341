@@ -1,5 +1,14 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
+const Validator = require('validatorjs');
+
+const contactRules = {
+  firstName: 'required',
+  lastName:  'required',
+  email:  'required|email',
+  favoriteColor: 'required|in:blue,orange,green,purple',
+  birthday: 'required|date'
+}
 
 const getAll = async (req, res) => {
   const result = await mongodb.getDb().db().collection('contact').find();
@@ -19,16 +28,15 @@ const getSingle = async (req, res) => {
 };
 
 const createContact = async (req, res) => {
-  const contact = {
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    email: req.body.email,
-    favoriteColor: req.body.favoriteColor,
-    birthday: req.body.birthday
-  };
-  const response = await mongodb.getDb().db().collection('contact').insertOne(contact);
-  if (response.acknowledged) {
-    res.status(201).json(response);
+  const contact = req.body;
+  const validation = new Validator(contact, contactRules)
+  if (validation.passes()) {
+    const response = await mongodb.getDb().db().collection('contact').insertOne(contact);
+    if (response.acknowledged) {
+      res.status(201).json(response);
+    } else {
+      res.status(500).json(response.error || 'Some error occurred while creating the contact.');
+    }
   } else {
     res.status(500).json(response.error || 'Some error occurred while creating the contact.');
   }
